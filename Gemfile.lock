@@ -112,7 +112,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (0.3.3)
-      mimemagic (~> 0.3.10)
+      mimemagic (~> 0.3.2)
     method_source (0.9.2)
     mimemagic (0.3.10)
       nokogiri (~> 1)
@@ -257,4 +257,4 @@ RUBY VERSION
    ruby 2.7.1p83
 
 BUNDLED WITH
-   1.16.2
+   2.1.4
