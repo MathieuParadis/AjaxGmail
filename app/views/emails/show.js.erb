@@ -1,0 +1,7 @@
+document.getElementById("email_show").textContent = "";
+document.querySelector('#email<%= @email.id %> .emails').classList.remove('font-weight-bold');
+document.querySelector('#email<%= @email.id %> .emails').classList.remove('text-dark');
+document.querySelector('#email<%= @email.id %> .emails').classList.add('text-secondary');
+
+
+document.getElementById("email_show").insertAdjacentHTML("beforeend", "<%= j render 'email_show', email: @email %>");

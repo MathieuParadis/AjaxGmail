@@ -1,0 +1,6 @@
+<div id='displayed-email<%= email.id %>'>
+  <h1><%= email.objet %></h1>
+  <p><%= email.body %></p>
+    <%= link_to "Supprimer", email_path(email.id), method: :delete, class: "btn btn-primary", remote: true %>
+    <%= link_to "Marquer comme non-lu", email_path(email.id), method: :patch, class: "btn-update btn btn-secondary", remote: true %>
+</div>

@@ -1,0 +1,10 @@
+document.querySelector('#email<%= @email.id %> .emails').classList.toggle('font-weight-bold');
+document.querySelector('#email<%= @email.id %> .emails').classList.toggle('text-dark');
+document.querySelector('#email<%= @email.id %> .emails').classList.toggle('text-secondary');
+
+
+if (document.querySelector('.btn-update').textContent === "Marquer comme lu") {
+  document.querySelector('.btn-update').textContent = "Marquer comme non-lu";
+} else {
+  document.querySelector('.btn-update').textContent = "Marquer comme lu";
+}

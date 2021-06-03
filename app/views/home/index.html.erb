@@ -1,0 +1,24 @@
+<h1 class="text-center mb-4">Welcome to my todolist app</h1>
+<%= render 'layouts/task_form'  %>
+<div class="container">
+  <ul id="listing">
+  <% @categories.each do  |category|%>
+  <li><%= category.title  %></li>
+  <div class="card">
+    <ul id="cat<%= category.id %>">
+      <% category.tasks.each do |task|  %>
+      <li id="task<%= task.id %>">
+        <%= task.title  %>
+        <% unless task.deadline.nil? %>
+          , to read: <%= task.deadline.strftime('%D')  %>
+        <% end %>
+        <%= check_box_tag :status, 1, false , data: { remote: true, url: task_path(task.id), params: { id: task.id, status: true}.to_param, method: "put" }%>
+        <%= link_to "", task_path(task.id), method: :delete, class: "fas fa-trash-alt", remote: true %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+  </ul>
+</div>
+
