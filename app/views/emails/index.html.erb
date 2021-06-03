@@ -1,12 +1,12 @@
 <h1 class="text-center mb-4">Email index page</h1>
 
-  <div class="container d-flex flex-column">
   <div class="d-flex justify-content-center mb-5">
     <%= link_to "recevoir un email", emails_path, method: :post, class: "btn btn-primary", remote: true %>
-
   </div>
-  <div class="container d-flex flex-row justify-content-between">
-    <div class="row d-flex flex-column">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg">
       <h2 class="text-primary">Liste des emails</h2>
         <div class="list-group">
           <ul id="email-list">
@@ -16,20 +16,18 @@
                 <li id="email<%= email.id %>"><%= link_to email.objet, email_path(email.id), method: :get, remote: true, class: "emails text-secondary" %></li>
               </button>
             <% else %>
-              <button type="button" class="list-group-item list-group-item-action list-unstyled">
+              <button id="btn-email<%= email.id %>" type="button" class="list-group-item list-group-item-action list-unstyled">
                 <li id="email<%= email.id %>"><%= link_to email.objet, email_path(email.id), method: :get, remote: true, class: "emails font-weight-bold text-dark" %></li>
               </button>
             <% end %>
           <% end %>
-        </ul>
+          </ul>
+        </div>
       </div>
-
-
-    </div>
-    <div class="row  d-flex flex-column">
+      
+      <div class="col-lg">
         <h2 class="text-primary">Email sélectionné</h2>
         <div id="email_show">
-        </div>
+      </div>
     </div>
   </div>
-</div>
