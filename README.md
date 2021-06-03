@@ -1,24 +1,23 @@
 # README
+THP Week 9 Day 4
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Project:
+- Handling of AJAX, and implementation into a rails app
 
-Things you may want to cover:
+* Details:
+- Creation of a Gmail like app 
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
+* Versions
+- Ruby: 2.7.1
+- Rails: 5.2.3
 
 * Database initialization
+Run in following order:
+- bundle install
+- rails db:create
+- rails db:migrate
+- rails db:seed to fill the database
+- rails server
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Heroku link
+- https://dashboard.heroku.com/apps/gmail-ajax-mat-edition
