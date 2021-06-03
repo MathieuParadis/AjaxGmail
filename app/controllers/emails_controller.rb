@@ -5,7 +5,7 @@ class EmailsController < ApplicationController
   end 
 
   def create
-    @email = Email.create(objet: Faker::Music.album, body: Faker::Book.title, read: false )
+    @email = Email.create(objet: Faker::Music.album, body:  Faker::Lorem.paragraph, read: false )
 
     respond_to do |format|
       format.html { redirect_to root_path }
